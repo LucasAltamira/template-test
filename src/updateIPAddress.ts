@@ -1,0 +1,10 @@
+import { Contacto, contactos } from "./contactos";
+
+const updateIPAddress = (contactos : Contacto[]): Contacto[]=> {
+    contactos.forEach(contacto => {
+        contacto.ip_address = contacto.ip_address + "." + contacto.id
+    });
+    return contactos
+    };
+
+export { updateIPAddress};
