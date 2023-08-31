@@ -1,12 +1,12 @@
 import { Contacto, contactos } from "./contactos";
 
 
-const eliminarContacto = (last_name: string): Contacto => {
+const eliminarContacto = ({apellido}:{apellido : string}): Contacto[] => {
     function buscarElNombre(contacto: Contacto){
-        return contacto.last_name === last_name;
+        return contacto.last_name !== apellido;
     }
-    const encontrados = contactos.filter(buscarElNombre) ;
-    encontrados.splice(0)
+    return contactos.filter(buscarElNombre) ;
+    
 };
 
 export { eliminarContacto };
