@@ -1,5 +1,8 @@
 import { Contacto, contactos } from "./contactos";
-const agregarContacto = (contactos: Contacto) =>{
-    contactos.push()
+
+const agregarContacto = (contacto: Contacto) =>{
+    contactos.push(contacto);
+    return contactos
 }
-export { eliminarContacto };
+
+export { agregarContacto };
