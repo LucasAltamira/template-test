@@ -9,4 +9,10 @@ const eliminarContacto = ({apellido}:{apellido : string}): Contacto[] => {
     
 };
 
+const agregarContacto = (contacto: Contacto) =>{
+    contactos.push(contacto);
+    return contactos
+}
+
+export { agregarContacto };
 export { eliminarContacto };
